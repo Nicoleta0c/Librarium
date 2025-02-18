@@ -12,7 +12,7 @@ const connectDB = async () => {
     }
 };
 
-console.log(connectDB);
+connectDB();  
 
 module.exports = connectDB;
 
