@@ -20,7 +20,5 @@ export function verificarToken(req, res, next) {
    } catch (e) {
        return res.status(401).json({ error: "Token no válido" });
    }
+}
 
-
-
-};
