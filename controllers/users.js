@@ -10,7 +10,7 @@ class usersController {
 
     async register (req, res) {
    try {
-            const {name, email, password} = req.body;
+            const {name, email, password, admin_user} = req.body;
 
             const usuarioExiste = await userModel.getOne({ email });
 
@@ -25,7 +25,8 @@ class usersController {
             const data = await userModel.create( {
                 name, 
                 email, 
-                password: claveEncriptada
+                password: claveEncriptada,
+                admin_user
             });
             res.status(201).json(data);
         } catch (e) {
