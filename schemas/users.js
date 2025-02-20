@@ -17,7 +17,9 @@
           required: true,
           trim: true,
         },
-       
+       admin_user:{
+           type: Boolean
+       },
       }, {timestamps: true}
     );
 
